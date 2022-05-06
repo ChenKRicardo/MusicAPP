@@ -1,0 +1,124 @@
+.songDetailContainer {
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cricle {
+    position: relative;
+    z-index: 100;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 10rpx 0;
+}
+
+.needle {
+    position: relative;
+    top: -40rpx;
+    left: 60rpx;
+    width: 192rpx;
+    height: 274rpx;
+    z-index: 99;
+    transform-origin: 40rpx 0;
+    transform: rotate(-20deg);
+    transition: transform .5s linear;
+}
+
+.rotate {
+    transform: rotate(0deg);
+}
+
+.disContainer {
+    position: relative;
+    top: -170rpx;
+    width: 598rpx;
+    height: 598rpx;
+}
+
+.discAnimation {
+    animation: disc 15s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes disc {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.disc {
+    width: 598rpx;
+    height: 598rpx;
+}
+
+.musicImg {
+    width: 370rpx;
+    height: 370rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 底部控制区域 */
+.musicControl {
+    position: absolute;
+    bottom: 40rpx;
+    left: 0;
+    border-top: 1rpx solid #fff;
+    width: 100%;
+    display: flex;
+}
+.musicControl text{
+    width: 20%;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 50rpx;
+}
+.musicControl text:nth-of-type(3){
+    font-size: 80rpx;
+}
+
+
+/* 音乐进度条展示 */
+.progress{
+    position: absolute;
+    bottom: 200rpx;
+    width: 640rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+.barControl{
+    position: relative;
+    width: 450rpx;
+    height: 4rpx;
+    background: rgba(0, 0, 0, .5);
+    margin: auto;
+}
+.audioCurrent{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4rpx;
+    background-color: rgb(147, 75, 75);
+    z-index: 1;
+}
+.audioCircle{
+    position: absolute;
+    top: -4rpx;
+    right: -12rpx;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    background: #fff;
+}
